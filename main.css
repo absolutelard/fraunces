@@ -54,7 +54,7 @@ footer{
 /* variable font animation */
 h3{
     font-weight: 40; 
-    text-align: center;
+    text-align: left;
     font-size: 12em;
     line-height: 25px;
     /* animation: weightChange 7s infinite; */
