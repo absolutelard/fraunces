@@ -13,7 +13,7 @@
         
     
     body{
-    background-color: lightsteelblue;
+    background-color: rgb(255, 253, 196);
     font-family: 'Fraunces', sans-serif;
 }
 /* how the page wrapper will appear on mobile */
@@ -30,19 +30,19 @@ grid-gap: 25px;
 grid-template-columns: 1fr 1fr;
 grid-template-rows: auto;
 grid-template-areas: 
-    "h v"
+    "v h"
     "a a";
 }
 
-.history {
+#history {
 grid-area: h;
 }
 
-.variations{
+#variations{
 grid-area: v;
 }
 
-.alphabet {
+#alphabet {
 grid-area: a;
 }
 }
@@ -53,31 +53,48 @@ footer{
 
 /* variable font animation */
 h3{
-    font-weight:20; 
+    font-weight: 40; 
     text-align: center;
-    font-size: 5em;
+    font-size: 12em;
     line-height: 25px;
     /* animation: weightChange 7s infinite; */
 }
 
 .first-fraunces{
     font-family: 'Fraunces', sans-serif;
-    font-size: 2em;
-    animation: firstWeightChange 7s infinite;
+    font-size: 10em;
+    animation: firstSoftChange 12s infinite;
 
 }
 
-@keyframes firstWeightChange {
+@keyframes firstSoftChange {
     0%, 100%{
         font-variation-settings: "opsz" 9, "wght" 100, "SOFT" 0, "WONK" 0;
     }
-    50%{font-variation-settings: "opsz" 144, "wght" 900, "SOFT" 100, "WONK" 1;
+    50%{font-variation-settings: "opsz" 9, "wght" 900, "SOFT" 100, "WONK" 0;
     }
     
 }
 .second-fraunces{
     font-family: 'Fraunces', sans-serif;
-    font-size: 2em;
+    font-size: 10em;
+    animation: firstWandOSChange 10s infinite;
+
+}
+
+@keyframes firstWandOSChange {
+    0%, 100%{
+        font-variation-settings: "opsz" 9, "wght" 200, "SOFT" 50, "WONK" 0;
+    }
+    50%{font-variation-settings: "opsz" 144, "wght" 200, "SOFT" 50, "WONK" 1;
+    }
+    
+}
+
+
+.third-fraunces{
+    font-family: 'Fraunces', sans-serif;
+    font-size: 10em;
     animation: firstWeightChange 7s infinite;
 
 }
