@@ -1,118 +1,152 @@
 @font-face {
     src: url("fonts/Fraunces[SOFT\,WONK\,opsz\,wght].woff2") format("woff2");
-        font-family: 'Fraunces';
-        font-style: normal;
-        font-weight: normal;
-        }
-        @font-face {
-            src: url("fonts/Fraunces-Italic[SOFT\,WONK\,opsz\,wght].woff2") format("woff2");  
-            font-family: 'Fraunces Italic';
-                font-style: normal;
-                font-weight: normal;
-                }
-        
-    
-    body{
+    font-family: 'Fraunces';
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    src: url("fonts/Fraunces-Italic[SOFT\,WONK\,opsz\,wght].woff2") format("woff2");  
+    font-family: 'Fraunces Italic';
+    font-style: normal;
+    font-weight: normal;
+}
+
+body {
     background-color: rgb(255, 253, 196);
     font-family: 'Fraunces', sans-serif;
 }
+
 /* how the page wrapper will appear on mobile */
-.page-wrapper{
+.page-wrapper {
     width: min(100% - 3rem, 80ch);
     margin-inline: auto;
 }
+
 /* how the page wrapper appears on desktop */
+@media only screen and (min-width:800px) {
+    .page-wrapper {
+        display: grid;
+        grid-gap: 25px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "v h"
+            "a a"
+            "w w";
+    }
 
-@media only screen and (min-width:800px){
-.page-wrapper{
-display: grid;
-grid-gap: 25px;
-grid-template-columns: 1fr 1fr;
-grid-template-rows: auto;
-grid-template-areas: 
-    "v h"
-    "a a";
+    #history {
+        grid-area: h;
+    }
+
+    #variations {
+        grid-area: v;
+    }
+
+    #alphabet {
+        grid-area: a;
+    }
+
+    #wonk {
+        grid-area: w;
+    }
 }
 
-#history {
-grid-area: h;
-}
-
-#variations{
-grid-area: v;
-}
-
-#alphabet {
-grid-area: a;
-}
-}
 /* CSS for the footer */
-footer{
+footer {
     background-color: gray;
 }
 
-/* variable font animation */
-h3{
-    font-weight: 40; 
+#variations {
+    grid-area: v;
+    text-align: Left;
+    font-size: 2em;
+}
+
+#variations h1 {
     text-align: left;
+    font-size: 35px;
+}
+
+#variations h2 {
+    text-align: left;
+    font-size: 25px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#alphabet {
+    grid-area: a;
+    text-align: center;
+    font-size: 2em;
+}
+
+h2 {
+    text-align: center;
+    font-size: 3em;
+    padding-top: 2em;
+}
+
+/* variable font animation */
+h3 {
+    font-weight: 40; 
+    text-align: center;
     font-size: 12em;
     line-height: 25px;
     /* animation: weightChange 7s infinite; */
 }
 
-.first-fraunces{
+.first-fraunces {
     font-family: 'Fraunces', sans-serif;
     font-size: 10em;
     animation: firstSoftChange 12s infinite;
-
 }
 
 @keyframes firstSoftChange {
-    0%, 100%{
+    0%, 100% {
         font-variation-settings: "opsz" 9, "wght" 100, "SOFT" 0, "WONK" 0;
     }
-    50%{font-variation-settings: "opsz" 9, "wght" 900, "SOFT" 100, "WONK" 0;
+    50% {
+        font-variation-settings: "opsz" 9, "wght" 900, "SOFT" 100, "WONK" 0;
     }
-    
 }
-.second-fraunces{
+
+.second-fraunces {
     font-family: 'Fraunces', sans-serif;
     font-size: 10em;
-    animation: firstWandOSChange 10s infinite;
-
+    animation: firstWandOSChange 8s infinite;
 }
 
 @keyframes firstWandOSChange {
-    0%, 100%{
+    0%, 100% {
         font-variation-settings: "opsz" 9, "wght" 200, "SOFT" 50, "WONK" 0;
     }
-    50%{font-variation-settings: "opsz" 144, "wght" 200, "SOFT" 50, "WONK" 1;
+    50% {
+        font-variation-settings: "opsz" 144, "wght" 200, "SOFT" 50, "WONK" 1;
     }
-    
 }
 
-
-.third-fraunces{
+.third-fraunces {
     font-family: 'Fraunces', sans-serif;
     font-size: 10em;
     animation: firstWeightChange 7s infinite;
-
 }
 
 @keyframes firstWeightChange {
-    0%, 100%{
+    0%, 100% {
         font-variation-settings: "opsz" 9, "wght" 100, "SOFT" 0, "WONK" 0;
     }
-    50%{font-variation-settings: "opsz" 144, "wght" 900, "SOFT" 100, "WONK" 1;
+    50% {
+        font-variation-settings: "opsz" 144, "wght" 900, "SOFT" 100, "WONK" 1;
     }
-    
 }
+
 /* variable font that changes on hover */
-.variable-font{
-    font-weight:1 ;
-    height:100vh;
+.variable-font {
+    font-weight: 1;
+    height: 100vh;
     font-size: 10em;
-    display:grid;
+    display: grid;
     place-content: center;
     margin: 0;
     text-align: center;
@@ -122,11 +156,11 @@ h3{
         font-variation-settings 3s;
 }
 
-.variable-font:hover{
-    font-weight:500 ;
-    height:100vh;
+.variable-font:hover {
+    font-weight: 500;
+    height: 100vh;
     font-size: 7em;
-    display:grid;
+    display: grid;
     place-content: center;
     margin: 0;
     text-align: center;
