@@ -141,6 +141,68 @@ h3 {
     }
 }
 
+/* Animations for the variations section  */
+
+.wonk {
+    font-family: 'Fraunces', sans-serif;
+    font-size: 2em;
+    animation: WonkChange 4s infinite;
+}
+
+@keyframes WonkChange {
+    0%, 100% {
+        font-variation-settings: "opsz" 9, "wght" 600, "SOFT" 100, "WONK" 0;
+    }
+    50% {
+        font-variation-settings: "opsz" 30, "wght" 600, "SOFT" 100, "WONK" 1;
+    }
+}
+
+.weight {
+    font-family: 'Fraunces', sans-serif;
+    font-size: 2em;
+    animation: WghtChange 7s infinite;
+}
+
+@keyframes WghtChange {
+    0%, 100% {
+        font-variation-settings: "opsz" 9, "wght" 100, "SOFT" 100, "WONK" 0;
+    }
+    50% {
+        font-variation-settings: "opsz" 9, "wght" 900, "SOFT" 100, "WONK" 1;
+    }
+}
+
+.opsz {
+    font-family: 'Fraunces', sans-serif;
+    font-size: 2em;
+    animation: OpszChange 7s infinite;
+}
+
+@keyframes OpszChange {
+    0%, 100% {
+        font-variation-settings: "opsz" 9, "wght" 100, "SOFT" 100, "WONK" 0;
+    }
+    50% {
+        font-variation-settings: "opsz" 144, "wght" 100, "SOFT" 100, "WONK" 0;
+    }
+}
+
+.soft {
+    font-family: 'Fraunces', sans-serif;
+    font-size: 2em;
+    animation: SoftChange 7s infinite;
+}
+
+@keyframes SoftChange {
+    0%, 100% {
+        font-variation-settings: "opsz" 9, "wght" 800, "SOFT" 0, "WONK" 0;
+    }
+    50% {
+        font-variation-settings: "opsz" 9, "wght" 800, "SOFT" 100, "WONK" 0;
+    }
+}
+
 /* variable font that changes on hover */
 .variable-font {
     font-weight: 1;
@@ -165,5 +227,22 @@ h3 {
     margin: 0;
     text-align: center;
     font-variation-settings: "wght" 120, "wdth" 0, "XXXX" 100;
+}
+
+/* Fancy button styles */
+.shadow {
+    background-color: #fc6a6a;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 15px 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-decoration: none
+}
+
+.shadow:hover {
+    background-color: #ff3f3f;
 }
 
