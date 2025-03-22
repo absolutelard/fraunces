@@ -59,8 +59,20 @@ footer {
 
 #variations {
     grid-area: v;
-    text-align: Left;
+    text-align: left;
     font-size: 2em;
+}
+
+#history{
+    grid-area: h;
+    text-align: left;
+    font-size: 1em;
+    padding-top: 7px;
+}
+
+#history h1{
+    font-size: 2em;
+    padding-bottom: 0;
 }
 
 #variations h1 {
@@ -79,6 +91,21 @@ footer {
     grid-area: a;
     text-align: center;
     font-size: 2em;
+    padding-bottom: 2em;
+}
+
+#hero h2{
+    font-size: 2em;
+    padding-top: 4em;
+    padding-bottom: 0;
+    margin-top: 20px;
+}
+
+#hero{
+    padding-top:0;
+    padding-bottom:0;
+    font-size: 4em;
+    margin-bottom: 20px;
 }
 
 h2 {
@@ -239,10 +266,20 @@ h3 {
     font-weight: bold;
     text-transform: uppercase;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    text-decoration: none
+    text-decoration: none;
 }
 
 .shadow:hover {
     background-color: #ff3f3f;
+}
+
+.hero {
+    position: relative;
+    padding: 20px; 
+    background-color: rgb(255, 172, 99);
+    box-shadow: 
+        0 0 0 10px rgb(255, 56, 56), 
+        0 0 0 15px rgb(255, 140, 46), 
+        0 0 0 20px rgb(255, 96, 57); 
 }
 
